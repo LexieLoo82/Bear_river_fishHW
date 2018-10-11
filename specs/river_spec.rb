@@ -9,6 +9,8 @@ class RiverTest < MiniTest::Test
 
 def setup
 @river = River.new("The Clyde")
+@bear = Bear.new("Yogi", "Brown")
+
 end
 
 
@@ -21,7 +23,7 @@ assert_equal(9, @river.fish_count)
 end
 
 def test_river_loses_fish
-  @river.fish_is_removed_from_river(@fish5)
+  @river.fish_is_removed_from_river()
   assert_equal(8, @river.fish_count())
 end
 

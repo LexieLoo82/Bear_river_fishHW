@@ -12,17 +12,13 @@ class River
     @fishes.length
   end
 
-  def fish_is_removed_from_river(fish)
-    index = @fishes.index(fish)
-    @fishes.slice!(index, 1)
+  def fish_is_removed_from_river()
+    @fishes.pop()
 
   end
 
   def bear_takes_fish(bear)
-    for fish in river.fishes()
-      fish_is_removed_from_river(fish)
-    end
-    bear.catches_fish
+    bear.stomach << @fishes.pop
   end
 
 end
